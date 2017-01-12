@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+{% block customstyle %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="static/style.css">
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<style>
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
+</style>
+
+{% endblock %}
+<title>guessblur</title>
+</head>
+<div id="navbar"><a href="/">&#x1F0A0; <b>Guessblur</b></a>
+<ul>
+<li><a href="/play">Play!</a></li>
+<li><a href="/highscores">Highscores</a></li>
+<li><a href="/about">About</a></li>
+
+</ul></div>
+
+ <body>
+{% block body%}
+<div id="stuff">
+	<div id="head"><h1>&#x1F0A0; guessblur &#x1F0A0;</h1></div>
+
+	<div><h2>Guessblur is a game where you can't always believe your eyes!</h2>
+	<br>
+	<b>How to play:</b> You will be given a blurred image and one of two possible descriptions of what the image is of. Using your eyes and common sense, you will decide whether or not the image fits the description. Seems easy enough, right?</div>
+
+  <div class="button-row">
+    <div id="btnPlay"><a title="Let's Play!" href="#" id="playy"></a></div>
+  </div>
+
+  <div id="login" class="hide">
+	  <form action="/start_game" method="POST">
+	  <p>
+	    <label>Name</label><br>
+	    <input type="text" name="name">
+	  </p>
+	  <button type="submit">PLAY</button>
+	</form>
+	</div>
+
+</div>
+</div>
+
+{% endblock %}
+
+<div class="wrapper">
+       <div class="ribbon-wrapper-green">
+       	<div class="ribbon-green">HIGHSCORES</div>
+		</div>
+		<br>
+			{{highscores}}
+</div>
+ </body>
+
+ <script type="text/javascript">
+
+    //  $("#btnPlay").click(function() {
+    //     $.getJSON("/selection", { value: "Yes"}, function(data) {
+    //         console.log(data.success)
+    //         console.log(data.points)
+    //     });
+    //     $(".login-hide").remove();
+    //     console.log("changed");
+    // });
+
+    $("#btnYes").click(function() {
+        $.getJSON("/selection", { action: "Yes"}, function(data) {
+            console.log(data.success)
+            console.log(data.points)
+        });
+        $("#img").removeClass("blur");
+        $("#img").addClass("unblur");
+        $("#options").remove();
+        console.log("clicked button yes,should be correct");
+         $("#btnYes").hide();
+	    $("#btnNo").hide();
+	    $("#btnNext").show();
+	    $("#correct").removeClass("hide");
+        console.log("changed");
+   });
+
+    $("#btnNo").click(function() {
+        $.getJSON("/selection", { action: "No"}, function(data) {
+            console.log(data.success)
+            console.log(data.points)
+        });
+        $("#img").removeClass("blur");
+        $("#img").addClass("unblur");
+        $("#options").remove();
+        $("#btnYes").hide();
+	    $("#btnNo").hide();
+	    $("#btnNext").show();
+	    $("#wrong").removeClass("hide");
+        console.log("clicked no, should show wrong");
+    });
+
+    $("#playy").click(function() {
+        $("#login").removeClass("hide");
+        $("#login").addClass("show");
+        // $("#options").remove();
+        $("#btnPlay").addClass("hide");
+        console.log("clicked playy");
+    });
+
+
+</script>
+<!-- {% block footer%}
+<div id="footer"><a href="/">&#x1F0A0; Fiddy</a>
+<ul>
+<li><a href="/play">Play!</a></li>
+<li><a href="/highscores">Highscores</a></li>
+<li><a href="/about">About</a></li>
+</ul></div>
+ {% endblock %} -->
+</html>
