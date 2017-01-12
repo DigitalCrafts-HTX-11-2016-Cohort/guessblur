@@ -25,7 +25,7 @@
         {% if session['missed'] == 2 %}
         <button class="button-row" name "button" id="btnNext" onclick="window.location.href='/game_over'">Continue</button>
         {% elif session['missed'] < 2 %}
-        <button class="button-row" name "button" id="btnNext" onclick="window.location.href='/game'">Continue</button>
+        <button class="button-row" name "button" id="btnNext" onclick="window.location.href='/play'">Continue</button>
         {% endif %}
         {% elif s == 2 %}
         <p>Is this {{image.correct}}?</p>
@@ -40,7 +40,7 @@
 
         {% if session['missed'] == 2 %}
         <button class="button-row" name "button" id="btnNext" onclick="window.location.href='/game_over'">Continue</button>
-        {% elif session['missed'] < 2 %} <button type="button" name "button" id="btnNext" onclick="window.location.href='/game'">Continue</button>
+        {% elif session['missed'] < 2 %} <button type="button" name "button" id="btnNext" onclick="window.location.href='/play'">Continue</button>
         {% endif %}
         {% endif %}
         {% endfor %}
