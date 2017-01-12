@@ -59,7 +59,10 @@
        	<div class="ribbon-green">HIGHSCORES</div>
 		</div>
 		<br>
-			{{highscores}}
+			{% for score in scores %}
+            {{score.name}}
+            {{score.score}}
+            {% endfor %}
 </div>
  </body>
 
