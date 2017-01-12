@@ -12,6 +12,8 @@ scores = db.query(
 
 @app.route('/', methods=['GET'])
 def index():
+    scores = db.query(
+        'select * from scores where score > 0 order by score desc limit 5').namedresult()
     return render_template('index.html', scores=scores)
 
 
@@ -27,6 +29,8 @@ def start_game():
 
 @app.route('/play', methods=['GET', 'POST'])
 def number():
+    scores = db.query(
+        'select * from scores where score > 0 order by score desc limit 5').namedresult()
     # picking a random image using SQL script and a random description using randint
     s = randint(1, 2)
     img = db.query('select * from images order by random() limit 1').namedresult()
@@ -51,11 +55,15 @@ def selection():
 
 @app.route('/game_over')
 def game_over():
+    scores = db.query(
+        'select * from scores where score > 0 order by score desc limit 5').namedresult()
     return render_template('/game_over.html', scores=scores)
 
 
 @app.route('/about')
 def about():
+    scores = db.query(
+        'select * from scores where score > 0 order by score desc limit 5').namedresult()
     return render_template('/about.html', scores=scores)
 
 
