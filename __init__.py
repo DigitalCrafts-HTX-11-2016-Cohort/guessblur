@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, session, request, redirect
 from random import randint
 import pg
 
-db = pg.DB(host="localhost", user="postgres", passwd="rocket", dbname="fiftyfifty")
+db = pg.DB(host="localhost", user="postgres", passwd="rocket", dbname="GuessBlur")
 
 app = Flask(__name__)
 
@@ -19,15 +19,15 @@ def start_game():
     session['name'] = name
     session['points'] = 0
     session['missed'] = 0
-    return redirect('/game')
+    return redirect('/play')
 
 
-@app.route('/game', methods=['GET', 'POST'])
+@app.route('/play', methods=['GET', 'POST'])
 def number():
     # picking a random image using SQL script and a random description using randint
     s = randint(1, 2)
     img = db.query('select * from images order by random() limit 1').namedresult()
-    return render_template("number.html", s=s, img=img)
+    return render_template("play1.html", s=s, img=img)
 
 
 @app.route('/selection', methods=['POST', 'GET'])
@@ -49,6 +49,10 @@ def selection():
 @app.route('/game_over')
 def game_over():
     return render_template('/game_over.html')
+
+@app.route('/about')
+def about():
+    return render_template('/about.html')
 
 
 @app.route('/end_game', methods=['POST', 'GET'])

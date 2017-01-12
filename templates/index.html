@@ -1,15 +1,3 @@
-<<<<<<< Updated upstream
-<form action="/start_game" method="POST">
-  <p>
-    <label>Name</label><br>
-    <input type="text" name="name">
-  </p>
-  <button type="submit">PLAY</button>
-</form>
-<form action="/highscores" method="get">
-    <button type="submit">High Scores</button>
-</form>
-=======
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
@@ -99,6 +87,7 @@
 	    $("#btnNo").hide();
 	    $("#btnNext").show();
 	    $("#correct").removeClass("hide");
+        $("#btnNext").removeClass("hide");
         console.log("changed");
    });
 
@@ -114,6 +103,7 @@
 	    $("#btnNo").hide();
 	    $("#btnNext").show();
 	    $("#wrong").removeClass("hide");
+        $("#btnNext").removeClass("hide");
         console.log("clicked no, should show wrong");
     });
 
@@ -121,8 +111,10 @@
         $("#login").removeClass("hide");
         $("#login").addClass("show");
         // $("#options").remove();
+        $("#btnPlay").addClass("hide");
         console.log("clicked playy");
     });
+
 
 
 </script>
@@ -135,4 +127,3 @@
 </ul></div>
  {% endblock %} -->
 </html>
->>>>>>> Stashed changes
