@@ -6,10 +6,13 @@ db = pg.DB(host="localhost", user="postgres", passwd="rocket", dbname="GuessBlur
 
 app = Flask(__name__)
 
+scores = db.query(
+    'select * from scores where score > 0 order by score desc limit 5').namedresult()
+
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    return render_template('index.html', scores=scores)
 
 
 @app.route('/start_game', methods=['POST'])
@@ -27,7 +30,7 @@ def number():
     # picking a random image using SQL script and a random description using randint
     s = randint(1, 2)
     img = db.query('select * from images order by random() limit 1').namedresult()
-    return render_template("play1.html", s=s, img=img)
+    return render_template("play1.html", s=s, img=img, scores=scores)
 
 
 @app.route('/selection', methods=['POST', 'GET'])
@@ -48,11 +51,12 @@ def selection():
 
 @app.route('/game_over')
 def game_over():
-    return render_template('/game_over.html')
+    return render_template('/game_over.html', scores=scores)
+
 
 @app.route('/about')
 def about():
-    return render_template('/about.html')
+    return render_template('/about.html', scores=scores)
 
 
 @app.route('/end_game', methods=['POST', 'GET'])
