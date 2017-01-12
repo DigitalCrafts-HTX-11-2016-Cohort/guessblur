@@ -53,7 +53,7 @@
 </div>
 
 {% endblock %}
-
+{% if not request.path == "/highscores" %}
 <div class="wrapper">
        <div class="ribbon-wrapper-green">
        	<div class="ribbon-green">HIGHSCORES</div>
@@ -62,8 +62,10 @@
 			{% for score in scores %}
             {{score.name}}
             {{score.score}}
+            <br />
             {% endfor %}
 </div>
+{% endif %}
  </body>
 
  <script type="text/javascript">
