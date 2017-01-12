@@ -1,6 +1,6 @@
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-</head>
+{% extends to "layout.html" %}
+
+{% block body %}
 {% if session['name'] %}
 {% for image in img %}
 <img class="gameimg blurred" src="{{image.url}}" alt="">
@@ -27,7 +27,7 @@
 {% endif %}
 {% endif %}
 {% endfor %}
-<h1>{{session['points']}}</h1> 
+<h1>{{session['points']}}</h1>
 {% endif %}
 <script type="text/javascript">
 $(document).ready(function() {
@@ -67,3 +67,4 @@ $("#btnNo").click(function() {
 <form class="" action="/end_game" method="post">
 <button type="submit">End Game</button>
 </form>
+{% endblock %}
