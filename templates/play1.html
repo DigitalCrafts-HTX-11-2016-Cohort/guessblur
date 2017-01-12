@@ -9,9 +9,9 @@
         {% if session['name'] %}
         {% for image in img %}
         <img class="blur" src="{{image.url}}" alt="" id="img">
+    </div>
         {% if s == 1 %}
         <p>Is this {{image.fake}}?</p>
-    </div>
             <div id="options"> <ul>
                         <li><div class="button-row"><div><a title="Yes" href="#" id="btnNo"></a></div>
                       </div></li>
@@ -22,11 +22,11 @@
         <p id="correct" class="right hide">CORRECT</p>
         <p id="wrong" class="wrong hide">WRONG</p>
 
-        {% if session['missed'] == 2 %}
+        <!-- {% if session['missed'] == 2 %}
         <button class="button-row hide" name="button" id="btnNext" onclick="window.location.href='/game_over'">Continue</button>
         {% elif session['missed'] < 2 %}
         <button class="button-row hide" name="button" id="btnNext" onclick="window.location.href='/play'">Continue</button>
-        {% endif %}
+        {% endif %} -->
         {% elif s == 2 %}
         <p>Is this {{image.correct}}?</p>
                     <div id="options"> <ul>
@@ -38,11 +38,11 @@
         <p id="correct" class="right hide">CORRECT</p>
         <p id="wrong" class="wrong hide">WRONG</p>
 
+        {% endif %}
         {% if session['missed'] == 2 %}
         <button class="button-row hide" name="button" id="btnNext" onclick="window.location.href='/game_over'">Continue</button>
         {% elif session['missed'] < 2 %}
         <button class="button-row hide" name="button" id="btnNext" onclick="window.location.href='/play'">Continue</button>
-        {% endif %}
         {% endif %}
         {% endfor %}
         <h1>{{session['points']}}</h1>
