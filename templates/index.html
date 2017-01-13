@@ -26,6 +26,8 @@
 {% elif not session['name'] %}
 <li><a href="/">Play!</a></li>
 {% endif %}
+{% elif request.path == "/play" %}
+<li><a href="/end_game">End Game</a></li>
 {% endif %}
 <li><a href="/highscores">Highscores</a></li>
 <li><a href="/about">About</a></li>
