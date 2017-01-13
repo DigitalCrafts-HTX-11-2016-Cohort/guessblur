@@ -49,7 +49,7 @@ def selection():
     elif action == 'No':
         # if the player gets 3 wrong, they lose
         session['missed'] = session.get('missed') + 1
-        session['attempts'] = session.get('attempts') - session['missed']
+        session['attempts'] = session.get('attempts') - 1
         return '{"success": "False", "points": "%d", "misses": "%d"}' % (session['points'], session['missed'])
 
 
