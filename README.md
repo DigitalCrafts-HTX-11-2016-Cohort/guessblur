@@ -1,4 +1,4 @@
-# Guessblur
+# [Guessblur](https://www.google.com)
 A game where you can't always trust your eyes! The user is displayed an image and they must decide whether the image is what the suggested description is.
 
 
