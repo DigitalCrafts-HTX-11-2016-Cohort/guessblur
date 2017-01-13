@@ -83,32 +83,38 @@
         $.getJSON("/selection", { action: "Yes"}, function(data) {
             console.log(data.success)
             console.log(data.points)
-        });
-        $("#img").removeClass("blur");
+            $("#img").removeClass("blur");
         $("#img").addClass("unblur");
         $("#options").remove();
         console.log("clicked button yes,should be correct");
          $("#btnYes").hide();
-	    $("#btnNo").hide();
-	    $("#btnNext").show();
-	    $("#correct").removeClass("hide");
+        $("#btnNo").hide();
+        $("#btnNext").addClass("show");
+        $("#correct").removeClass("hide");
         $("#btnNext").removeClass("hide");
+        });
+        
         console.log("changed");
    });
 
     $("#btnNo").click(function() {
         $.getJSON("/selection", { action: "No"}, function(data) {
-            console.log(data.success)
-            console.log(data.points)
+            console.log(data.success);
+            console.log(data.misses);
+            console.log(data.points);
+            if(data.misses==3){
+                window.location.href='/game_over';
+            }
+            $("#img").removeClass("blur");
+            $("#img").addClass("unblur");
+            $("#options").remove();
+            $("#btnYes").hide();
+            $("#btnNo").hide();
+            $("#btnNext").addClass("show");
+            $("#wrong").removeClass("hide");
+            $("#btnNext").removeClass("hide");
         });
-        $("#img").removeClass("blur");
-        $("#img").addClass("unblur");
-        $("#options").remove();
-        $("#btnYes").hide();
-	    $("#btnNo").hide();
-	    $("#btnNext").show();
-	    $("#wrong").removeClass("hide");
-        $("#btnNext").removeClass("hide");
+        
         console.log("clicked no, should show wrong");
     });
 
@@ -119,6 +125,7 @@
         $("#btnPlay").addClass("hide");
         console.log("clicked playy");
     });
+
 
 
 
