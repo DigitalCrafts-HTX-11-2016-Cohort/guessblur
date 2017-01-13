@@ -3,11 +3,11 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 
-body, html { 
-  margin: 0; 
-  padding: 0; 
-  height: 100%; 
-  width: 100%; 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   background-color: #ea605d;
   background: linear-gradient(to right, #000, 5%, #ce332f, 20%, #ea605d, #E53935, 90%, #111);
   font-family: sans-serif;
@@ -65,7 +65,7 @@ body {
 }
 
 #game {
-   margin-left: 30%;
+   margin-left: 40%;
 }
 
 #image {
@@ -117,84 +117,84 @@ h2 {
 
 #navbar li {
   position: relative;
-  display: block;  
+  display: block;
   float: left;
   margin-right: 1.563em;
 
   height: 100%;
   width: 6.25em;
-  
+
   cursor: pointer;
   user-select: none;
-  
+
   background: #0C0C0C;
   color: #FFF;
   text-align: center;
   line-height: 2.5em;
 }
 
-#navbar 
+#navbar
   li::before {
   content: '';
   position: absolute;
-  display: block; 
- 
+  display: block;
+
   left: -1.5em;
-  
+
   width: 0;
   height: 0;
-  
+
   border-top: 2.5em solid transparent;
   border-right: 1.563em solid #0C0C0C;
 }
 
-#navbar 
+#navbar
   li::after {
   content: '';
   position: absolute;
   display: block;
-  
-  top: 0;  
+
+  top: 0;
   right: -1.5em;
-  
+
   width: 0;
   height: 0;
-  
+
   border-top: 2.5em solid #0C0C0C;
   border-right: 1.563em solid transparent;
 }
 
 /* Hover */
 
-#navbar 
-li:hover {  
+#navbar
+li:hover {
   color: #666;
   background: #000;
 }
-#navbar 
-li:hover::after {  
+#navbar
+li:hover::after {
   border-top: 2.5em solid #000;
   border-right: 1.563em solid transparent;
 }
-#navbar 
-li:hover::before {  
+#navbar
+li:hover::before {
   border-top: 2.5em solid transparent;
   border-right: 1.563em solid #000;
 }
 
- /*Active*/ 
-#navbar 
-li:active {  
+ /*Active*/
+#navbar
+li:active {
   color: #BBB;
   background: #DDD;
 }
-#navbar 
-li:active::after {  
+#navbar
+li:active::after {
   border-top: 2.5em solid #DDD;
   border-right: 1.563em solid transparent;
 }
-#navbar 
-li:active::before {  
+#navbar
+li:active::before {
   border-top: 2.5em solid transparent;
   border-right: 1.563em solid #DDD;
 }
@@ -212,9 +212,9 @@ li:active::before {
 }
 .wrapper {
 /*  margin: 50px auto;
-*/  
+*/
 /*  text-align: center;
-*/  
+*/
   top:20px;
   right: 40px;
   width: 220px;
@@ -253,11 +253,11 @@ li:active::before {
   top: 15px;
   width: 120px;
   background-color: #eee;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd)); 
-  background-image: -webkit-linear-gradient(top, #eee, #ddd); 
-  background-image:    -moz-linear-gradient(top, #eee, #ddd); 
-  background-image:     -ms-linear-gradient(top, #eee, #ddd); 
-  background-image:      -o-linear-gradient(top, #eee, #ddd); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #eee, #ddd);
+  background-image:    -moz-linear-gradient(top, #eee, #ddd);
+  background-image:     -ms-linear-gradient(top, #eee, #ddd);
+  background-image:      -o-linear-gradient(top, #eee, #ddd);
   color: #6a6340;
   -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
   -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
@@ -266,7 +266,7 @@ li:active::before {
 
 .ribbon-green:before, .ribbon-green:after {
   content: "";
-/*  border-top:   3px solid #6e8900;*/   
+/*  border-top:   3px solid #6e8900;*/
   border-left:  3px solid transparent;
   border-right: 3px solid transparent;
   position:absolute;
@@ -291,10 +291,10 @@ li:active::before {
   display: inline-flex;
 }
 
-.button-row > 
+.button-row >
   div {
   -webkit-flex: 1; /* Safari 6.1+ */
-    -ms-flex: 1; /* IE 10 */ 
+    -ms-flex: 1; /* IE 10 */
     flex: 1;
   position: relative;
   top: 20px;
@@ -378,15 +378,15 @@ li:active::before {
 
 .button-row {
   font-weight: 400;
-  font-size: 2em;  
+  font-size: 2em;
   font-family: 'Rubik One', sans-serif;
 }
 
 
 #login {
-  width:470px; 
-  margin:0 auto; 
-  padding-left:50px; 
+  width:470px;
+  margin:0 auto;
+  padding-left:50px;
   padding-top:10px;
 }
 
@@ -398,26 +398,26 @@ li:active::before {
   display: none;
 }
 
-#about 
+#about
   body {
     font-family: 'Lato', sans-serif;
     color: #FFF;
     background: #322f30;
     -webkit-font-smoothing: antialiased;
 }
-#about 
+#about
   a {
     text-decoration: none;
     color: #fff;
 }
 
-#about 
+#about
   p > a:hover{
     color: #d9d9d9;
     text-decoration:  underline;
 }
 
-#about 
+#about
 h1 {
   font-weight: lighter;
 }
@@ -577,23 +577,32 @@ ul.social-icons {
   float:right;
 }*/
 
-#options 
+#options
   li {
     padding: 10px;
     padding-left: 30px;
   }
-#options 
+#options
   ul {
     position: absolute;
 /*    margin-left: 25%;
 */  }
 
-#point {
+#points {
   position: fixed;
   margin-left: 0;
+  float: left;
+  margin-top: 20%;
+
+}
+#attempts {
+  position: fixed;
+  margin-left: 0;
+  float: left;
+
 }
 
-#scores 
+#scores
   table {
   margin-top: 20px;
   margin-left: 40px;
@@ -601,7 +610,7 @@ ul.social-icons {
   border-color: #000;
 }
 
-#scores 
+#scores
   td {
     padding: 0;
   }
@@ -610,7 +619,7 @@ ul.social-icons {
     body { background: #ea605d;
     }
 
-    .button-row 
+    .button-row
       div{
         width: 150px;
       }
@@ -678,7 +687,7 @@ html, body, .main {
   -ms-filter: blur(8px);
   filter: url(#blur);
   filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='8');
-   overflow: hidden; 
+   overflow: hidden;
 }
 
 .blur:after {
