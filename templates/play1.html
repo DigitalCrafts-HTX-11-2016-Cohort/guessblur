@@ -45,10 +45,20 @@
         {% endif %}
         {% endif %}
         {% endfor %}
-        <div id="point"><h1>{{session['points']}} points</h1></div>
-        {% endif %}
+
+</div>
+    <div id="attempts">
+        <h1>Attempts:
+        <br>
+        {{session['attempts']}}</h1></div>
 </div>
 </div>
+    <div id="point">
+        <h1>Points:
+        <br>
+        {{session['points']}}</h1></div>
+</div>
+{% endif %}
 
 <!-- <script type="text/javascript">
 $(document).ready(function() {
