@@ -590,14 +590,14 @@ ul.social-icons {
 
 #points {
   position: fixed;
-  margin-left: 0;
+  margin-left: 5%;
   float: left;
   margin-top: 20%;
 
 }
 #attempts {
   position: fixed;
-  margin-left: 0;
+  margin-left: 5%;
   float: left;
 
 }
