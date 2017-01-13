@@ -23,9 +23,9 @@ Sorting out the ins and outs of gameplay was definitely a challenge. A lot of st
 > Nedra: Dear god, the CSS. It was so brutal. So brutal. I thought of every ex. I texted 2 of them. I still didn't get the CSS > perfect, but I got some closure. It's raining. It's also 4am. I'm approaching 700 lines of CSS; is this normal?)
 
 ###Screenshots
-![homepage](static/homepage.png "The website's home page.")
-![gameplay](static/gameplay.png "Gameplay.")
-![gameplay2](static/gameplay2.png "More gameplay.")
+![homepage](static/homepage.png =300x300 "The website's home page.")
+![gameplay](static/gameplay.png =300x300 "Gameplay.")
+![gameplay2](static/gameplay2.png =300x300 "More gameplay.")
 
 Built with ![heart](http://i.imgur.com/4PataBu.png) with:
 HTML, Python, [soooo much] CSS, Flask, Jinja, imgur API, JSON, [a wee bit of] Javascript
