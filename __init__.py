@@ -24,6 +24,7 @@ def start_game():
     session['name'] = name
     session['points'] = 0
     session['missed'] = 0
+    session['attempts'] = 3
     return redirect('/play')
 
 
@@ -48,6 +49,7 @@ def selection():
     elif action == 'No':
         # if the player gets 3 wrong, they lose
         session['missed'] = session.get('missed') + 1
+        session['attempts'] = session.get('attempts') - session['missed']
         return '{"success": "False", "points": "%d", "misses": "%d"}' % (session['points'], session['missed'])
 
 
