@@ -20,10 +20,12 @@
 </head>
 <div id="navbar"><a href="/">&#x1F0A0; <b>Guessblur</b></a>
 <ul>
+{% if not request.path == "/play" %}
 {% if session['name'] %}
 <li><a href="/play">Play!</a></li>
 {% elif not session['name'] %}
 <li><a href="/">Play!</a></li>
+{% endif %}
 {% endif %}
 <li><a href="/highscores">Highscores</a></li>
 <li><a href="/about">About</a></li>
