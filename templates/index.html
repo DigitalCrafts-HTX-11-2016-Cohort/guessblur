@@ -20,7 +20,11 @@
 </head>
 <div id="navbar"><a href="/">&#x1F0A0; <b>Guessblur</b></a>
 <ul>
+{% if session['name'] %}
+<li><a href="/play">Play!</a></li>
+{% elif not session['name'] %}
 <li><a href="/">Play!</a></li>
+{% endif %}
 <li><a href="/highscores">Highscores</a></li>
 <li><a href="/about">About</a></li>
 
@@ -93,7 +97,7 @@
         $("#correct").removeClass("hide");
         $("#btnNext").removeClass("hide");
         });
-        
+
         console.log("changed");
    });
 
@@ -114,7 +118,7 @@
             $("#wrong").removeClass("hide");
             $("#btnNext").removeClass("hide");
         });
-        
+
         console.log("clicked no, should show wrong");
     });
 
