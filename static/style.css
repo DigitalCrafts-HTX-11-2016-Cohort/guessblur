@@ -589,8 +589,22 @@ ul.social-icons {
 */  }
 
 #point {
-  position: relative;
+  position: fixed;
+  margin-left: 0;
 }
+
+#scores 
+  table {
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 60%;
+  border-color: #000;
+}
+
+#scores 
+  td {
+    padding: 0;
+  }
 
   @media only screen and (max-width: 700px) {
     body { background: #ea605d;
