@@ -44,13 +44,11 @@ def selection():
     if action == 'Yes':
         # player recieves points upon guessing correctly
         session['points'] = session.get('points', 0) + 1
-        return '{"success": True, "points": %d}' % session['points']
+        return '{"success": "True", "points": "%d"}' % session['points']
     elif action == 'No':
         # if the player gets 3 wrong, they lose
         session['missed'] = session.get('missed') + 1
-        if session['missed'] == 3:
-            return redirect('/game_over')
-        return '{"success": False, "points": %d}' % session['points']
+        return '{"success": "False", "points": "%d", "misses": "%d"}' % (session['points'], session['missed'])
 
 
 @app.route('/game_over')
