@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Rubik+One';
+@import url('https://fonts.googleapis.com/css?family=Rubik+One';)
 @import url(http://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
@@ -85,7 +85,7 @@ img {
 
 h1 {
   text-shadow: 1px 1px rgba(0, 0, 0, .1);
-  color: #ffffff;
+  color: #fff;
   margin-top: 70px;
   /*font-family: 'VT323', monospace;*/
   font-family: 'Rubik One', Arial, sans-serif;
@@ -95,6 +95,11 @@ h1 {
 
 h2 {
   color: #fff;
+  text-shadow: 1px 1px rgba(0, 0, 0, .1);
+  margin-top: 70px;
+  font-family: 'Rubik One', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
 }
 
 /*
@@ -211,10 +216,6 @@ li:active::before {
   padding-top: 20px;
 }
 .wrapper {
-/*  margin: 50px auto;
-*/
-/*  text-align: center;
-*/
   top:20px;
   right: 40px;
   width: 220px;
@@ -266,7 +267,6 @@ li:active::before {
 
 .ribbon-green:before, .ribbon-green:after {
   content: "";
-/*  border-top:   3px solid #6e8900;*/
   border-left:  3px solid transparent;
   border-right: 3px solid transparent;
   position:absolute;
@@ -602,17 +602,42 @@ ul.social-icons {
 
 }
 
-#scores
-  table {
-  margin-top: 20px;
-  margin-left: 40px;
-  width: 60%;
-  border-color: #000;
+#scores {
+  font-family: 'VT323', monospace;
+  margin-left: 80px;
+  background-color: #111;
+  width: 100%;
+  padding-left: 20px;
+  border-radius: 10px;
 }
 
-#scores
-  td {
+
+#scores 
+  h1 {
+  font-family: 'VT323', monospace;
+  font-size: 2em;
+  }
+
+#scores 
+  table {
+    width: 60%;
+    border-style: none;
+    outline: none;
+}
+
+#scores 
+  th {
     padding: 0;
+    border-style: none;
+
+  }
+
+#scores 
+  td {
+    border-style: none;
+    font-size: 1.6em;
+    padding: 0 20px 20px 0;
+
   }
 
   @media only screen and (max-width: 700px) {
