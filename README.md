@@ -33,4 +33,4 @@ Gameplay
 Correct guess!
 
 Built with ![heart](http://i.imgur.com/4PataBu.png) with:
-HTML, Python, [soooo much] CSS, Flask, Jinja, imgur API, JSON, [a wee bit of] Javascript
+HTML, Python, [soooo much] CSS, Flask, Jinja, JSON, [a wee bit of] Javascript
