@@ -20,8 +20,8 @@ ___________________________________________________
 ___________________________________________________ 
 */
 
-
 * { box-sizing: border-box; }
+
 #navbar {
   color: #eee;
   font-family: 'Lato', sans-serif;
@@ -118,7 +118,7 @@ li:hover::before {
   border-right: 1.563em solid #000;
 }
 
- /*Active*/
+ /* Active */
 #navbar
 li:active {
   color: #BBB;
@@ -136,8 +136,16 @@ li:active::before {
 }
 
 
+/* 
+___________________________________________________ 
 
-/* Div for the game description on the main page */
+    M A I N   P A G E  / B U T T O N  S T U F F
+___________________________________________________ 
+*/
+
+/* ----------------------------
+  GAME DESCRIPTION ON INDEX 
+------------------------------- */
 #stuff {
   margin-left: 24%;
   width: 45%;
@@ -148,6 +156,135 @@ body {
   color: #eee;
 
 }
+
+/* 
+---------------------------
+    PLAY NOW BUTTON
+---------------------------
+*/
+
+#btnPlay {
+  position: relative;
+  top:20;
+  left: 20%;}
+
+.button-meow {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.button-meow 
+  div {
+  -webkit-flex: 1; /* Safari 6.1+ */
+  -ms-flex: 1; /* IE 10 */
+  flex: 1;
+  position: relative;
+  top: 20px; 
+  width: 200px;
+  height: 50px;
+  margin: 0;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.button-meow > div > a {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-25px);
+  -moz-transform: translateZ(-25px);
+  -ms-transform: translateZ(-25px);
+  -o-transform: translateZ(-25px);
+  transform: translateZ(-25px);
+  -webkit-transition: -webkit-transform 0.25s;
+  -moz-transition: -moz-transform 0.25s;
+  transition: transform 0.25s;
+}
+
+.button-meow > div > a::before, 
+.button-meow > div > a::after {
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 400px;
+  height: 50px;
+  position: absolute;
+  border: 5px solid #89221f;
+  box-sizing: border-box;
+  content: attr(title);
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button-meow > div > a::before {
+  background-color: #89221f;
+  color: #fff;
+  -webkit-transform: rotateY(0deg) translateZ(25px);
+  -moz-transform: rotateY(0deg) translateZ(25px);
+  -ms-transform: rotateY(0deg) translateZ(25px);
+  -o-transform: rotateY(0deg) translateZ(25px);
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+.button-meow > div > a::after {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+  -webkit-transform: rotateX(90deg) translateZ(25px);
+  -moz-transform: rotateX(90deg) translateZ(25px);
+  -ms-transform: rotateX(90deg) translateZ(25px);
+  -o-transform: rotateX(90deg) translateZ(25px);
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+.button-meow > div > a:hover {
+  -webkit-transform: translateZ(-25px) rotateX(-90deg);
+  -moz-transform: translateZ(-25px) rotateX(-90deg);
+  -ms-transform: translateZ(-25px) rotateX(-90deg);
+  -o-transform: translateZ(-25px) rotateX(-90deg);
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.button-meow {
+  font-weight: 400;
+  font-size: 2em;
+  font-family: 'VT323', monospace;
+}
+
+
+#login {
+  width:470px;
+  margin:0 auto;
+  padding-left:50px;
+  padding-top:10px;
+}
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
 
 /* 
 ___________________________________________________ 
@@ -331,123 +468,6 @@ ___________________________________________________
   right: 0;
 }​
 
-/* The button the button the button button the button*/
-.button-row {
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: inline-box;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.button-row >
-  div {
-  -webkit-flex: 1; /* Safari 6.1+ */
-    -ms-flex: 1; /* IE 10 */
-    flex: 1;
-  position: relative;
-  top: 20px;
-/*  margin-left: 80px;
-*/  width: 200px;
-  height: 50px;
-  margin: 0;
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  perspective: 1000px;
-}
-
-.button-row > div > a {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform: translateZ(-25px);
-  -moz-transform: translateZ(-25px);
-  -ms-transform: translateZ(-25px);
-  -o-transform: translateZ(-25px);
-  transform: translateZ(-25px);
-  -webkit-transition: -webkit-transform 0.25s;
-  -moz-transition: -moz-transform 0.25s;
-  transition: transform 0.25s;
-}
-
-.button-row > div > a::before, .button-row > div > a::after {
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  width: 400px;
-  height: 50px;
-  position: absolute;
-  border: 5px solid #f89221f;
-  box-sizing: border-box;
-  content: attr(title);
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.button-row > div > a::before {
-  background-color: #89221f;
-  color: #fff;
-  -webkit-transform: rotateY(0deg) translateZ(25px);
-  -moz-transform: rotateY(0deg) translateZ(25px);
-  -ms-transform: rotateY(0deg) translateZ(25px);
-  -o-transform: rotateY(0deg) translateZ(25px);
-  transform: rotateY(0deg) translateZ(25px);
-}
-
-.button-row > div > a::after {
-  background-color: #000;
-  border-color: #000;
-  color: #fff;
-  -webkit-transform: rotateX(90deg) translateZ(25px);
-  -moz-transform: rotateX(90deg) translateZ(25px);
-  -ms-transform: rotateX(90deg) translateZ(25px);
-  -o-transform: rotateX(90deg) translateZ(25px);
-  transform: rotateX(90deg) translateZ(25px);
-}
-
-.button-row > div > a:hover {
-  -webkit-transform: translateZ(-25px) rotateX(-90deg);
-  -moz-transform: translateZ(-25px) rotateX(-90deg);
-  -ms-transform: translateZ(-25px) rotateX(-90deg);
-  -o-transform: translateZ(-25px) rotateX(-90deg);
-  transform: translateZ(-25px) rotateX(-90deg);
-}
-
-.button-row {
-  font-weight: 400;
-  font-size: 2em;
-  font-family: 'VT323', monospace;
-}
-
-
-#login {
-  width:470px;
-  margin:0 auto;
-  padding-left:50px;
-  padding-top:10px;
-}
-
-.show{
-  display: block;
-}
-
-.hide{
-  display: none;
-}
 
 
 /* 
@@ -500,7 +520,11 @@ ul {
     list-style: none;
 }
 
-/* SOCIAL MEDIA ICONS */
+/* 
+---------------------------
+    SOCIAL MEDIA ICONS 
+---------------------------
+*/
 .footer-social-icons {
     width: 350px;
     display:block;
@@ -681,16 +705,17 @@ ___________________________________________________
 
   }
 
-/* MOBILE CONDITIONS */
+/* 
+___________________________________________________ 
+
+          M O B I L E    C O N D I T I O N S
+___________________________________________________ 
+*/
 
   @media only screen and (max-width: 780px) {
     body { background: #E53935;
     }
 
-    .button-row
-      div{
-        width: 150px;
-      }
     .wrapper {
       visibility: hidden;
     }
@@ -698,6 +723,7 @@ ___________________________________________________
     #playy {
       font-size: 10px;
       flex-shrink: 20%;
+      width: 150px;
     }
 }
 
