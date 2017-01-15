@@ -65,11 +65,14 @@ body {
 }
 
 #game {
-   margin-left: 40%;
+   margin-left: 30%;
+  justify-content: center;
+  align-items: center;
 }
 
 #image {
     margin-top: 20px;
+    margin-left: 5%;
     border: 8px solid #000;
     background: #000;
     width: 300px;
@@ -385,7 +388,7 @@ li:active::before {
 .button-row {
   font-weight: 400;
   font-size: 2em;
-  font-family: 'Rubik One', sans-serif;
+  font-family: 'VT323', monospace;
 }
 
 
@@ -446,6 +449,8 @@ ul {
     padding:0;
     list-style: none;
 }
+
+/*SOCIAL MEDIA ICONS */
 .footer-social-icons {
     width: 350px;
     display:block;
@@ -578,21 +583,17 @@ ul.social-icons {
     background-color: #e25714;
 }
 
-/*#game {
-  position: absolute;
-  float:right;
-}*/
+/*GAMEPLAY YES OR NO SELECTIONS*/
 
 #options
-  li {
-    padding: 10px;
-    padding-left: 30px;
-  }
+li {
+    padding-bottom: 10px;
+/*    padding-left: 30px;
+*/  }
 #options
   ul {
-    position: absolute;
-/*    margin-left: 25%;
-*/  }
+    position: relative;
+ }
 
 #points {
   position: fixed;
@@ -604,14 +605,15 @@ ul.social-icons {
 #attempts {
   position: fixed;
   margin-left: 5%;
+  margin-top: 25%;
   float: left;
 
 }
 
 #scores {
   font-family: 'VT323', monospace;
-  margin-left: 80px;
-  background-color: #111;
+/*  margin-left: 80px;
+*/  background-color: #111;
   width: 100%;
   padding-left: 20px;
   border-radius: 10px;
@@ -635,6 +637,7 @@ ul.social-icons {
   th {
     padding: 0;
     border-style: none;
+    font-size: 2em;
 
   }
 
@@ -642,9 +645,11 @@ ul.social-icons {
   td {
     border-style: none;
     font-size: 1.6em;
-    padding: 0 20px 20px 0;
+    padding: 0 0px 20px 100px;
 
   }
+
+/*MOBILE CONDITIONS*/
 
   @media only screen and (max-width: 700px) {
     body { background: #ea605d;
@@ -664,6 +669,8 @@ ul.social-icons {
     }
 }
 
+
+/* OLD CODE BONEYARD*/
 /*
 .main, h1 {
   flex-direction: column;
