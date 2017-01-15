@@ -22,6 +22,8 @@ Sorting out the ins and outs of gameplay was definitely a challenge. A lot of st
 
 > Nedra: Dear god, the CSS. It was so brutal. So brutal. I thought of every ex. I texted 2 of them. I still didn't get the CSS perfect, but I got some closure. It's raining. It's also 4am. I'm approaching 700 lines of CSS; is this normal?
 
+####Guessblur in its many stages + Some lovely little errors:
+<img src="http://i.imgur.com/XRvSLf3.png" alt="alt text" width="gameplay" height="100"> <img src="http://i.imgur.com/M20luVx.png" alt="alt text" width="gameplay" height="100"> <img src="http://i.imgur.com/4ibltWS.png" alt="alt text" width="gameplay" height="100"> <img src="https://raw.githubusercontent.com/DigitalCrafts-HTX-11-2016-Cohort/guessblur/master/static/gameplay.png" alt="alt text" width="gameplay" height="100"> 
 ***
 
 ###Screenshots
