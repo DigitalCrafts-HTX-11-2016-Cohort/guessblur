@@ -25,12 +25,7 @@ Sorting out the ins and outs of gameplay was definitely a challenge. A lot of st
 ***
 
 ###Screenshots
-![homepage](static/homepage.png)
-Homepage
-![gameplay](static/gameplay.png)
-Gameplay
-![gameplay2](static/gameplay2.png)
-Correct guess!
+
 
 Built with ![heart](http://i.imgur.com/4PataBu.png) with:
 HTML, Python, [soooo much] CSS, Flask, Jinja, JSON, [a wee bit of] Javascript
