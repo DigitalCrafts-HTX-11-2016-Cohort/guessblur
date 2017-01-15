@@ -27,5 +27,7 @@ Sorting out the ins and outs of gameplay was definitely a challenge. A lot of st
 ###Screenshots
 Brb, updating!
 
+***
+
 Built with ![heart](http://i.imgur.com/4PataBu.png) with:
 HTML, Python, [soooo much] CSS, Flask, Jinja, JSON, [a wee bit of] Javascript
