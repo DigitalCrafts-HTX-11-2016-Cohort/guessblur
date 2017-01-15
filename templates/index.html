@@ -10,7 +10,8 @@
 {% endblock %}
 <title>guessblur</title>
 </head>
-<div id="navbar"><a href="/">&#x1F0A0; <b>Guessblur</b></a>
+
+<div id="navbar"><a href="/"><i class="fa fa-star-half-o" aria-hidden="true"></i><b>Guessblur</b></a>
 <ul>
 {% if not request.path == "/play" %}
 {% if session['name'] %}
@@ -55,8 +56,8 @@
 {% endblock %}
 {% if not request.path == "/highscores" %}
 <div class="wrapper">
-       <div class="ribbon-wrapper-green">
-       	<div class="ribbon-green">HIGHSCORES</div>
+       <div class="ribbon-wrapper">
+       	<div class="ribbon">HIGHSCORES</div>
 		</div>
 		<br>
 			{% for score in scores %}
