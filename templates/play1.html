@@ -20,6 +20,13 @@
 {% for image in img %}
 <div id="game">
     <div id="image">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="0" width="0">
+          <defs>
+             <filter id="blur" x="0" y="0">
+               <feGaussianBlur stdDeviation="3" />
+             </filter>
+          </defs>
+        </svg>   
         <img class="blur" src="{{image.url}}" alt="" id="img">
     </div>
         {% if s == 1 %}
