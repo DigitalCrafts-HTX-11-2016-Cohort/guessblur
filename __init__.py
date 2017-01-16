@@ -6,9 +6,6 @@ db = pg.DB(host="localhost", user="postgres", passwd="rocket", dbname="GuessBlur
 
 app = Flask(__name__)
 
-scores = db.query(
-    'select * from scores where score > 0 order by score desc limit 5').namedresult()
-
 
 @app.route('/', methods=['GET'])
 def index():
@@ -19,29 +16,50 @@ def index():
 
 @app.route('/start_game', methods=['POST'])
 def start_game():
+    print "in start_game"
     # starting the session to keep track of points
     name = request.form.get('name')
     session['name'] = name
     session['points'] = 0
     session['missed'] = 0
     session['attempts'] = 3
+    session['used'] = ['0']
+    print "initialized session['used']"
     return redirect('/play')
 
 
 @app.route('/play', methods=['GET', 'POST'])
 def number():
+    print "in play"
     scores = db.query(
         'select * from scores where score > 0 order by score desc limit 5').namedresult()
     # picking a random image using SQL script and a random description using randint
     s = randint(1, 2)
-    img = db.query('select * from images order by random() limit 1').namedresult()
+    print session['used']
+    print ",".join(session['used'])
+    q = 'select * from images where id not in (%s) order by random() limit 1' % ",".join(session[
+        'used'])
+    print q
+    img = db.query(q).namedresult()
+    usedIds = session['used']
+    for image in img:
+        print "before append"
+        print type(session['used'])
+        print session['used']
+        usedIds.append(str(image.id))
+        # session['used']=session['used']
+    session['used'] = usedIds
+    print session['used']
+
     return render_template("play1.html", s=s, img=img, scores=scores)
 
 
 @app.route('/selection', methods=['POST', 'GET'])
 def selection():
+    print "in selection"
     action = request.args.get('action')
     print "action=" + action
+    print session['used']
     if action == 'Yes':
         # player recieves points upon guessing correctly
         session['points'] = session.get('points', 0) + 1
