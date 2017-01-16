@@ -136,6 +136,27 @@ li:active::before {
   border-right: 1.563em solid #DDD;
 }
 
+#mobile-nav{
+  margin-top: 0;
+  background-color: #000;
+  width: 100%;
+}
+
+#mobile-nav 
+  a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#mobile-nav 
+  li {
+    display: block;
+    padding: 5px 0;
+    margin: 0 5px;
+    border-bottom: solid 1px #222; 
+    background-color: #000;
+  }
+
 
 /* 
 ___________________________________________________ 
@@ -148,9 +169,17 @@ ___________________________________________________
   GAME DESCRIPTION ON INDEX 
 ------------------------------- */
 #stuff {
-/*  margin-left: 24%;*/
-  width: 45%;
+  max-width: 45%;
   text-align: center;
+}
+
+#stuff 
+h1 {
+  text-shadow: 1px 1px rgba(0, 0, 0, .1);
+  color: #fff;
+  margin-top: 70px;
+  font-family: 'VT323', monospace;
+  font-size: 3em;
 }
 
 body {
@@ -167,7 +196,7 @@ body {
 #btnPlay {
   position: absolute;
   top: 480px;
-  left: 30%;
+  left: 28%;
   }
 
 #btnMobile {
@@ -280,7 +309,7 @@ body {
 #login {
   width:470px;
   margin:0 auto;
-  padding-left:50px;
+/*  padding-left:50px;*/
   padding-top:10px;
 }
 
@@ -683,15 +712,13 @@ ___________________________________________________
 ___________________________________________________ 
 */
 
-
 #scores {
   font-family: 'VT323', monospace;
   background-color: #111;
   width: 100%;
   height: 100%;
   padding-left: 20px;
-  padding-top: 25px;
-  border-radius: 10px;
+  padding-bottom: 100px;
 }
 
 
@@ -706,6 +733,9 @@ ___________________________________________________
     width: 60%;
     border-style: none;
     outline: none;
+    padding-top: 60px;
+    height: 100%;
+
 }
 
 #scores 
@@ -720,8 +750,7 @@ ___________________________________________________
   td {
     border-style: none;
     font-size: 1.6em;
-    padding: 0 0px 20px 100px;
-
+    padding-bottom: 5px;
   }
 
 
@@ -751,7 +780,7 @@ ___________________________________________________
 ___________________________________________________ 
 */
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 775px) {
     body, html { 
     background: none;
     background-color: #E53935;
@@ -759,7 +788,11 @@ ___________________________________________________
     }
 
     #navbar {
-      visibility: hidden;
+      display: none;
+    }
+
+    #stuff {
+      width: 55%;
     }
 
     .wrapper {
