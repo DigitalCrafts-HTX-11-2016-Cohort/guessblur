@@ -11,7 +11,7 @@
 <title>guessblur</title>
 </head>
 
-<div id="navbar"><a href="/"><i class="fa fa-star-half-o" aria-hidden="true"></i><b>Guessblur</b></a>
+<div id="navbar"><a href="/"><i class="fa fa-star-half-o" aria-hidden="true"></i> <b>Guessblur</b></a>
 <ul>
 {% if not request.path == "/play" %}
 {% if session['name'] %}
@@ -29,31 +29,43 @@
 
  <body>
 {% block body%}
-<div id="stuff">
+      <center><div id="stuff">
 	<div id="head"><h1>guessblur</h1></div>
 
 	<div><h2>Guessblur is a game where you can't always believe your eyes!</h2>
 	<br>
 	<b>How to play:</b> You will be given a blurred image and one of two possible descriptions of what the image is of. Using your eyes and common sense, you will decide whether or not the image fits the description. Seems easy enough, right?</div>
+</div>
 
   <div class="button-meow">
     <div id="btnPlay"><a title="Let's Play!" href="#" id="playy"></a></div>
+  </div>  
+
+  <div class="button-meow">
+    <div id="btnMobile" class="hide"><a title="Let's Play!" href="#" id="playy"></a></div>
   </div>
 
   <div id="login" class="hide">
-	  <form action="/start_game" method="POST">
+<form action="/start_game" method="POST">
 	  <p>
 	    <label>Name</label><br>
 	    <input type="text" name="name">
 	  </p>
 	  <button type="submit">PLAY</button>
-	</form>
+	</form></center>
 	</div>
 
-</div>
-</div>
+<!-- </div> -->
+{% block footer %}
+<div class="footer">
+    copyright 2017 // made with by Marvin + Nedra</a>
+   </div>
+  </body>
+{% endblock %}
 
 {% endblock %}
+
+
 {% if not request.path == "/highscores" %}
 <div class="wrapper">
        <div class="ribbon-wrapper">
@@ -127,8 +139,41 @@
         console.log("clicked playy");
     });
 
+// onload
+if(document.body.clientWidth < 775) {
+   console.log("loaded on small screen");
+    $("#btnPlay").removeClass("show");
+    $("#btnPlay").addClass("hide");
+    // hide let's play
+    $("#login").removeClass("hide");
+    $("#login").addClass("show");
+    //show login
+} else{
+    $("#btnPlay").removeClass("hide");
+    $("#btnPlay").addClass("show");
+    // hide let's play
+    $("#login").removeClass("show");
+    $("#login").addClass("hide");
+}
 
-
+    $(window).resize(function() {
+       console.log("button change show");
+       if(document.body.clientWidth < 775) {
+           console.log("loaded on small screen");
+            $("#btnPlay").removeClass("show");
+            $("#btnPlay").addClass("hide");
+            // hide let's play
+            $("#login").removeClass("hide");
+            $("#login").addClass("show");
+            //show login
+        } else{
+            $("#btnPlay").removeClass("hide");
+            $("#btnPlay").addClass("show");
+            // hide let's play
+            $("#login").removeClass("show");
+            $("#login").addClass("hide");
+        }
+});
 
 </script>
 </html>

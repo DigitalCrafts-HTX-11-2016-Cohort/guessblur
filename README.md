@@ -22,15 +22,17 @@ Sorting out the ins and outs of gameplay was definitely a challenge. A lot of st
 
 > Nedra: Dear god, the CSS. It was so brutal. So brutal. I thought of every ex. I texted 2 of them. I still didn't get the CSS perfect, but I got some closure. It's raining. It's also 4am. I'm approaching 700 lines of CSS; is this normal?
 
+####Guessblur in its many stages + Some lovely little errors:
+<img src="http://i.imgur.com/XRvSLf3.png" alt="alt text" width="gameplay" height="100"> <img src="http://i.imgur.com/M20luVx.png" alt="alt text" width="gameplay" height="100"> <img src="http://i.imgur.com/4ibltWS.png" alt="alt text" width="gameplay" height="100"> <img src="https://raw.githubusercontent.com/DigitalCrafts-HTX-11-2016-Cohort/guessblur/master/static/gameplay.png" alt="alt text" width="gameplay" height="100"> 
+
 ***
 
-###Screenshots
-![homepage](static/homepage.png)
-Homepage
-![gameplay](static/gameplay.png)
-Gameplay
-![gameplay2](static/gameplay2.png)
-Correct guess!
+###Current Screenshots
+<img src="http://i.imgur.com/BIFspRo.png" alt="alt text" width="gameplay" height="400"> 
+<img src="http://i.imgur.com/PX5GRzA.png" alt="alt text" width="gameplay" height="400"> 
+<img src="http://i.imgur.com/Ur0agwu.png" alt="alt text" width="gameplay" height="400">
+
+***
 
 Built with ![heart](http://i.imgur.com/4PataBu.png) with:
 HTML, Python, [soooo much] CSS, Flask, Jinja, JSON, [a wee bit of] Javascript
