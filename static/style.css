@@ -16,7 +16,7 @@ body, html {
 /* 
 ___________________________________________________ 
 
-              N A V A G A T I O N
+              N A V I G A T I O N
 ___________________________________________________ 
 */
 
@@ -37,6 +37,7 @@ ___________________________________________________
     text-decoration: none;
     color: #eee;
     font-weight: lighter;
+    font-size: 
     font-family: 'VT323', monospace;
   }
 
@@ -164,9 +165,11 @@ body {
 */
 
 #btnPlay {
-  position: relative;
-  top:20;
-  left: 20%;}
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  }
+
 
 .button-meow {
   display: -webkit-inline-box;
@@ -199,6 +202,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
+   -webkit-tap-highlight-color: transparent;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -299,6 +303,12 @@ ___________________________________________________
   width:100%;
   -webkit-filter: blur(10px);
   filter: blur(10px);
+  -moz-filter: blur(10px);
+ -ms-filter: blur(10px);
+ -o-filter: blur(10px);
+ filter: blur(10px);
+/* filter: url(#blur);   
+*/ filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='50');
   padding: 0;
   z-index: 50;
 }
@@ -328,13 +338,15 @@ ___________________________________________________
     background: #000;
     width: 300px;
     z-index: 100;
-    overflow: hidden;
+    overflow: hidden;   
+   -webkit-tap-highlight-color: transparent;
 }
+
 
 img {
   max-width: 300px;
   padding: 5px;
-
+   -webkit-tap-highlight-color: transparent;
 }
 
 h1 {
@@ -501,7 +513,6 @@ h1 {
   font-weight: lighter;
 }
 
-
 h2,
 h3,
 h4,
@@ -518,6 +529,10 @@ h6 {
 ul {
     padding:0;
     list-style: none;
+}
+
+#nedra {
+  padding-bottom: 40px;
 }
 
 /* 
@@ -668,10 +683,11 @@ ___________________________________________________
 
 #scores {
   font-family: 'VT323', monospace;
-/*  margin-left: 80px;
-*/  background-color: #111;
+  background-color: #111;
   width: 100%;
+  height: 100%;
   padding-left: 20px;
+  padding-top: 25px;
   border-radius: 10px;
 }
 
