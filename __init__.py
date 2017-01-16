@@ -36,7 +36,7 @@ def number():
     # picking a random image using SQL script and a random description using randint
     s = randint(1, 2)
     print session['used']
-    print ",".join(session['used'])  # ['3','5','12'] => "3,5,12"
+    print ",".join(session['used'])
     q = 'select * from images where id not in (%s) order by random() limit 1' % ",".join(session[
         'used'])
     print q
