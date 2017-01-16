@@ -18,10 +18,9 @@ Upon realizing that MisleadingThumbnails could potentially take its place, we be
 ***
 
 ###Minimum Viable product
-Our MVP was simply a game that take random images from a database and have the user guess whether the description given was true or false. The images would be blurred at first and then would be revealed once the user made their choice.
+Our MVP was simply a game that take random images from a database and have the user guess whether the description given was true or false. The images would be blurred at first and then would be revealed once the user made their choice. The game would keep score and list the top scores for all to see!
 
 ###Stretch Goals
-* add scores
 * create admin page
 * integrate Imgur's API
 * stop images from repeating during a game
