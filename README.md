@@ -24,12 +24,13 @@ Sorting out the ins and outs of gameplay was definitely a challenge. A lot of st
 
 ####Guessblur in its many stages + Some lovely little errors:
 <img src="http://i.imgur.com/XRvSLf3.png" alt="alt text" width="gameplay" height="100"> <img src="http://i.imgur.com/M20luVx.png" alt="alt text" width="gameplay" height="100"> <img src="http://i.imgur.com/4ibltWS.png" alt="alt text" width="gameplay" height="100"> <img src="https://raw.githubusercontent.com/DigitalCrafts-HTX-11-2016-Cohort/guessblur/master/static/gameplay.png" alt="alt text" width="gameplay" height="100"> 
+
 ***
 
-###Screenshots
-<img src="http://i.imgur.com/BIFspRo.png" alt="alt text" width="gameplay" height="100"> 
-<img src="http://i.imgur.com/PX5GRzA.png" alt="alt text" width="gameplay" height="100"> 
-<img src="http://i.imgur.com/Ur0agwu.png" alt="alt text" width="gameplay" height="100">
+###Current Screenshots
+<img src="http://i.imgur.com/BIFspRo.png" alt="alt text" width="gameplay" height="400"> 
+<img src="http://i.imgur.com/PX5GRzA.png" alt="alt text" width="gameplay" height="400"> 
+<img src="http://i.imgur.com/Ur0agwu.png" alt="alt text" width="gameplay" height="400">
 
 ***
 
