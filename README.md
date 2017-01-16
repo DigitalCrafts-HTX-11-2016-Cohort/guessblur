@@ -27,7 +27,9 @@ Sorting out the ins and outs of gameplay was definitely a challenge. A lot of st
 ***
 
 ###Screenshots
-Brb, updating!
+<img src="http://i.imgur.com/BIFspRo.png" alt="alt text" width="gameplay" height="100"> 
+<img src="http://i.imgur.com/PX5GRzA.png" alt="alt text" width="gameplay" height="100"> 
+<img src="http://i.imgur.com/Ur0agwu.png" alt="alt text" width="gameplay" height="100">
 
 ***
 
