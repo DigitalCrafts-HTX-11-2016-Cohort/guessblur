@@ -17,7 +17,7 @@ The biggest initial challenge was deciding how we'd arrange gameplay. Once we de
 Upon realizing that MisleadingThumbnails could potentially take its place, we began digging. At first, we wanted to use Imgur's API to grab the images that would be displayed. However, since we were going to have to curate each image and add a secondary description anyway, we decided to just manually add the image urls to our database. Ideally, we could use the API to grab the images for us in an admin page where we could add the secondary description and then save THAT to the database, but let's keep it simple for now. Maybe for a stretch goal.
 ***
 
-###Minimum Viable product
+###Minimum Viable Product
 Our MVP was simply a game that take random images from a database and have the user guess whether the description given was true or false. The images would be blurred at first and then would be revealed once the user made their choice. The game would keep score and list the top scores for all to see!
 
 ###Stretch Goals
