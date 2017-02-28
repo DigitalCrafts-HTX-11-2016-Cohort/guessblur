@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, session, request, redirect
 from random import randint
 import pg
 
-db = pg.DB(host="localhost", user="postgres", passwd="rocket", dbname="GuessBlur")
+db = pg.DB(host="localhost", user="postgres", passwd="jbv0225m@m", dbname="guessblur")
 
 app = Flask(__name__)
 
